@@ -1,4 +1,16 @@
-# Event QR Code Tracker (Google Apps Script + Google Sheets)
+# Event QR Code Tracker
+
+**A QR code and link tracking tool for offline events and email campaigns.** Give every event, poster, flyer, email or
+social post its own QR code or link, and see how many people used each one, per day and per channel, in a Google Sheet.
+
+It's built for **nonprofits and small teams with limited budgets**, using tools you probably already have: a **Google Sheet**
+is the database and dashboard, **Google Apps Script** does the logging and makes the QR codes, and a **free Cloudflare Worker**
+gives visitors an instant redirect. There are no servers to run and nothing to pay for at typical event and campaign volumes.
+
+It **scales up with paid plans** when you need more. For example, Google Workspace accounts get higher Apps Script daily
+limits, and Cloudflare's paid Workers plan handles far more requests per day than the free plan. No code changes are needed.
+
+Licensed under the [MIT License](LICENSE).
 
 > ## ⚠️ Never change the web app URL
 > The deployment's `/exec` URL is printed into every QR code. **When you update the script, always use
@@ -243,3 +255,13 @@ Editing campaigns (names, destinations, active) needs **no** redeploy. It's just
   plenty for typical events, but a very large crowd scanning at the same moment could see occasional slowdowns.
   Logging never blocks the redirect: if a scan can't be written, the visitor is still sent on.
 - **Privacy.** The Sheet is private by default. Share it **view-only** with teammates who need the numbers.
+
+## License
+[MIT](LICENSE): free to use, change and share, including for your organisation. The QR encoder in
+`apps-script/QrCode.gs` is adapted from [Project Nayuki's QR Code generator library](https://www.nayuki.io/page/qr-code-generator-library)
+(also MIT); its notice is kept in that file and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Contributors
+- [@youyunjx](https://github.com/youyunjx): creator and first contributor
+
+Contributions are welcome: open an issue or a pull request.
