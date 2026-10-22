@@ -1,0 +1,9 @@
+# Copy to wrangler.toml and fill in both values.
+name = "event-qr"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+[vars]
+APPS_SCRIPT_URL = "https://script.google.com/macros/s/<DEPLOYMENT_ID>/exec"
+WORKER_KEY = "PASTE_THE_SAME_KEY_AS_WORKER_KEY_IN_apps-script/Config.gs"

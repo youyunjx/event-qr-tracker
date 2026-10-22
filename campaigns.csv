@@ -1,0 +1,4 @@
+slug,name,destination_url,active
+event-a,Event A – Expo,https://example.com,TRUE
+event-b,Event B,https://example.com,TRUE
+event-c,Event C,https://example.com,TRUE

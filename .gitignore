@@ -1,0 +1,16 @@
+# Installation-specific or private (each has a *.example next to it)
+.env
+.clasp.json
+apps-script/Config.gs
+apps-script/appsscript.json
+worker/wrangler.toml
+
+# Generated / local
+qr_codes/
+.clasprc.json
+.venv/
+__pycache__/
+worker/.wrangler/
+.wrangler/
+.claude/
+INSTALL-NOTES.md

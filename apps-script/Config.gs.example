@@ -1,0 +1,11 @@
+// Installation settings. Copy this file to Config.gs (which stays out of git) and fill in your values.
+
+// The Apps Script deployment's /exec URL from Deploy → Manage deployments (never a /dev URL).
+const WEB_APP_URL = 'https://script.google.com/macros/s/<DEPLOYMENT_ID>/exec';
+
+// Optional: your Cloudflare Worker address for instant redirects, e.g. 'https://event-qr.<subdomain>.workers.dev'.
+// Leave '' to use the Apps Script links (visitors tap "Continue to site").
+const LINK_BASE_URL = '';
+
+// Optional: a long random key, the same value as WORKER_KEY in worker/wrangler.toml. Required for the Worker.
+const WORKER_KEY = '';

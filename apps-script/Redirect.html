@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 56px 24px; text-align: center; color: #222; }
+  h1 { font-size: 1.3em; font-weight: 600; margin: 0 0 8px; }
+  p { color: #555; margin: 0 0 28px; }
+  .btn { display: block; max-width: 360px; margin: 0 auto; padding: 18px 24px; background: #1a73e8; color: #fff;
+         border-radius: 12px; text-decoration: none; font-size: 1.2em; font-weight: 600; }
+</style>
+</head>
+<body>
+  <h1>Thanks for scanning!</h1>
+  <p>Tap below to continue to <?= host ?></p>
+  <a id="go" class="btn" href="<?= url ?>" target="_top">Continue to site</a>
+  <script>
+    // Google's sandbox only allows leaving this page after a tap, so this usually does nothing;
+    // kept for any browser that does allow it. The URL is read from the (auto-escaped) link.
+    try { window.top.location.href = document.getElementById('go').href; } catch (e) {}
+  </script>
+</body>
+</html>
